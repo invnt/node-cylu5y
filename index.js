@@ -12,4 +12,10 @@ app.get('/url', (req, res, next) => {
   res.json(['Tony', 'Lisa', 'Michael', 'Ginger', 'Food']);
 });
 
-app.listen(80);
+app.listen(process.env.PORT || 3000, function () {
+  console.log(
+    'Express server listening on port %d in %s mode',
+    this.address().port,
+    app.settings.env
+  );
+});
