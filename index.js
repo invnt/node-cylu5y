@@ -4,9 +4,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-app.post('/', function (req, res) {
-  console.log(req.body);
-  res.json(req.body);
+app.get('/', function (req, res) {
+  res.send('GET request to homepage');
 });
 
 app.listen(3000);
